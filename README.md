@@ -22,8 +22,8 @@ A modern, elegant e-commerce store built with Next.js 14+ (App Router), TypeScri
 
 1.  **Clone the repository:**
   \`\`\`bash
-  git clone <repository-url>
-  cd <repository-directory>
+  git clone https://github.com/iHani/ebra-frontend.git ebra-frontend
+  cd ebra-frontend
   \`\`\`
 
 2.  **Install dependencies:**
