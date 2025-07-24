@@ -21,4 +21,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-</merged_code>
