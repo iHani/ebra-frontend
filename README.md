@@ -13,30 +13,28 @@ A modern, elegant e-commerce store built with Next.js 14+ (App Router), TypeScri
 
 ## Getting Started
 
-### Prerequisites
+Live Demo: [https://ebra-frontend.vercel.app/](https://ebra-frontend.vercel.app/)
 
--   Node.js (v18 or later)
--   A package manager like npm, pnpm, or yarn
 
 ### Installation
 
 1.  **Clone the repository:**
-  \`\`\`bash
-  git clone <repository-url>
-  cd <repository-directory>
-  \`\`\`
+  ```bash
+  git https://github.com/iHani/ebra-frontend.git ebra-frontend
+  cd ebra-frontend
+  ```
 
 2.  **Install dependencies:**
-  \`\`\`bash
+  ```bash
   npm install
-  \`\`\`
+  ```
 
 ### Running the Development Server
 
 To start the development server, run:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
