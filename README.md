@@ -2,6 +2,11 @@
 
 A modern, elegant e-commerce store built with Next.js 14+ (App Router), TypeScript, and Tailwind CSS. This project demonstrates best practices for building production-ready web applications, including server-side data fetching, granular loading states, and robust error handling.
 
+## Live Demo
+
+Live Demo: [https://ebra-store.vercel.app/](https://ebra-store.vercel.app/)
+
+
 ## Core Features
 
 -   **Next.js App Router:** Utilizes the latest features for routing, layouts, and server components.
@@ -12,6 +17,7 @@ A modern, elegant e-commerce store built with Next.js 14+ (App Router), TypeScri
 -   **Styled with Tailwind CSS & shadcn/ui:** A modern, responsive, and accessible UI.
 
 ## Getting Started
+
 
 ### Prerequisites
 
