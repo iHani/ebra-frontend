@@ -84,7 +84,7 @@ export default function Header() {
             <Link href="/cart">
               <ShoppingBag className="h-6 w-6" />
               {isClient && itemCount > 0 && (
-                <span className="absolute top-0 right-0 flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-3legant-gray-500 px-1.5 text-xs font-bold text-white transform translate-x-1/2 -translate-y-1/2">
+                <span className="absolute -top-2 -right-2 flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-3legant-gray-500 px-1 text-xs font-bold text-white">
                   {itemCount}
                 </span>
               )}

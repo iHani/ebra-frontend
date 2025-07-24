@@ -71,8 +71,61 @@ export default function CartPage() {
           </div>
           <div className="divide-y">
             {items.map((item) => (
-              <div key={item.id} className="grid grid-cols-5 gap-4 py-6 items-center">
-                <div className="col-span-2 flex items-center gap-4">
+              <div key={item.id} className="py-6 md:grid md:grid-cols-5 md:gap-4 md:items-center">
+                {/* --- MOBILE VIEW --- */}
+                <div className="flex items-center gap-4 md:hidden">
+                  <div className="relative w-24 h-24 bg-3legant-gray-100 rounded-md flex-shrink-0">
+                    <Image
+                      src={item.image || "/placeholder.svg"}
+                      alt={item.title}
+                      fill
+                      className="object-contain p-2"
+                    />
+                  </div>
+                  <div className="flex-grow flex flex-col">
+                    <div className="flex justify-between">
+                      <h2 className="font-semibold text-3legant-gray-500 hover:text-black">
+                        <Link href={`/product/${item.id}`}>{item.title}</Link>
+                      </h2>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-auto w-auto p-0 text-3legant-gray-400 hover:text-red-500"
+                        onClick={() => removeFromCart(item.id)}
+                      >
+                        <X className="h-5 w-5" />
+                      </Button>
+                    </div>
+                    <p className="text-sm text-3legant-gray-300 mt-1">Color: Black</p>
+                    <div className="flex justify-between items-center mt-3">
+                      <div className="flex items-center border rounded-md">
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-9 w-9"
+                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                        >
+                          <Minus className="h-4 w-4" />
+                        </Button>
+                        <span className="w-10 text-center font-bold text-sm">{item.quantity}</span>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-9 w-9"
+                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                        >
+                          <Plus className="h-4 w-4" />
+                        </Button>
+                      </div>
+                      <div className="font-bold text-3legant-gray-500 text-lg">
+                        ${(item.price * item.quantity).toFixed(2)}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* --- DESKTOP VIEW --- */}
+                <div className="hidden md:flex col-span-2 items-center gap-4">
                   <div className="relative w-24 h-24 bg-3legant-gray-100 rounded-md">
                     <Image
                       src={item.image || "/placeholder.svg"}
@@ -96,7 +149,7 @@ export default function CartPage() {
                     </Button>
                   </div>
                 </div>
-                <div className="flex justify-center">
+                <div className="hidden md:flex justify-center">
                   <div className="flex items-center border rounded-md">
                     <Button
                       variant="ghost"
@@ -117,8 +170,10 @@ export default function CartPage() {
                     </Button>
                   </div>
                 </div>
-                <div className="text-right font-semibold text-3legant-gray-400">${item.price.toFixed(2)}</div>
-                <div className="text-right font-bold text-3legant-gray-500">
+                <div className="hidden md:block text-right font-semibold text-3legant-gray-400">
+                  ${item.price.toFixed(2)}
+                </div>
+                <div className="hidden md:block text-right font-bold text-3legant-gray-500">
                   ${(item.price * item.quantity).toFixed(2)}
                 </div>
               </div>
