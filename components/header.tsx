@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useCartStore } from "@/lib/store"
-import { Search, User, ShoppingBag, Menu } from 'lucide-react'
+import { Search, User, ShoppingBag, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/sheet"
 import { useEffect, useState } from "react"
@@ -84,7 +84,7 @@ export default function Header() {
             <Link href="/cart">
               <ShoppingBag className="h-6 w-6" />
               {isClient && itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center rounded-full bg-3legant-gray-500 text-white text-xs font-bold">
+                <span className="absolute top-0 right-0 flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-3legant-gray-500 px-1.5 text-xs font-bold text-white transform translate-x-1/2 -translate-y-1/2">
                   {itemCount}
                 </span>
               )}

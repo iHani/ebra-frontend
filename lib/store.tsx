@@ -1,3 +1,5 @@
+"use client"
+
 import { create } from "zustand"
 import type { CartItem, Product } from "./types"
 import { toast } from "@/components/ui/use-toast"

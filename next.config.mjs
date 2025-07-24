@@ -1,16 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'fakestoreapi.com',
+        port: '',
+        pathname: '/img/**',
+      },
+    ],
+    unoptimized: true,
+  },
+  productionBrowserSourceMaps: false,
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  },
-  // Disable production source maps to reduce build memory usage
-  productionBrowserSourceMaps: false,
-}
+};
 
-export default nextConfig
+export default nextConfig;
+</merged_code>
