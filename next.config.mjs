@@ -9,6 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Disable production source maps to reduce build memory usage
+  productionBrowserSourceMaps: false,
 }
 
 export default nextConfig
